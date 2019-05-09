@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Trash Can Location </title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <meta charset="utf-8">
+
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 500px;  /* The height is 400 pixels */
+        width: 90%;  /* The width is the width of the web page */
+        align-self: center;
+       }
+    </style>
+  </head>
+  <body>
+    
+  <h3>Trash Cans Location:  </h3>
+    <div class="container-fluid" id="map">
+    <div class="row thm">
+
+    </div>
+
+    </div>
+
+
+<!--{% for t in trash %}-->
+  <!--<div id="lat"> {{ t.T_x_c  }} </div> - <div id="lng"> {{t.T_y_c}} </div>-->
+<!--{% endfor %}-->
+  <!--parseFloat(document.getElementById('lat').innerHTML)-->
+  <!--parseFloat(document.getElementById('lng').innerHTML)-->
+  <script>
+
+// Initialize and add the map
+function initMap() {
+
+  var uluru = {lat:30.7097739  ,lng:76.6858297  };
+
+  var map = new google.maps.Map(document.getElementById('map'), {zoom: 12, center: uluru});
+
+  var marker = new google.maps.Marker({position: uluru, map: map});
+
+}
+
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT79IjIXNg69ChpliTTd3m6_qnTjM8WAQ&callback=initMap">
+    </script>
+
+
+
+  </body>
+</html>

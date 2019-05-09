@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Delete Driver</title>
+</head>
+<body>
+
+
+<h1>Delete: {{ driver.D_Name }}?</h1>
+<h2>Username: {{ driver.D_Username }}?</h2>
+
+<form method="GET" action="">
+
+    {% csrf_token %}
+Are you sure you want to delete this Driver Record?
+<input type="submit" value="Delete"/>
+
+</form>
+<a href="/D_list/{{driver.id}}/"> Cancel </a>
+</body>
+</html>

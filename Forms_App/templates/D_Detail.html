@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Drivers</title>
+</head>
+<body>
+
+
+
+<h1>{{ driver.id }}</h1>
+<h2>{{ driver.D_Name }}</h2>
+
+
+<p>Username: {{ driver.D_Username }}</p>
+
+<p>Password: {{ driver.D_Password }}</p>
+
+<p>Address: {{ driver.D_Address }}</p>
+
+<p>Phone no: {{ driver.D_Ph_no }}</p>
+
+<p>Truck No: {{ driver.Truck_no }}</p>
+<br>
+<p>Go back to the <a href="/D_list"> List of Drivers </a></p>
+<br>
+
+
+<div class="driver">
+ <form method="GET" action="{% url 'Delete_Driver' %}">
+ <button type="submit" > Delete </button>
+</form>
+</div>
+
+
+
+<script>
+function myFunction() {
+  confirm(" Are you Sure to remove !!");
+}
+</script>
+
+</body>
+</html>

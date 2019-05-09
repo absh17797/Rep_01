@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Delete Client</title>
+</head>
+<body>
+
+
+<h1>Delete: {{ customer.C_Name }}?</h1>
+<h2>Username: {{ customer.C_Username }}?</h2>
+
+
+<form method="POST" action="">
+{% csrf_token %}
+Are you sure you want to delete this Client's Record?
+<input type="submit" value="Delete"/>
+
+</form>
+<a href="/list/"> Cancel </a>
+</body>
+</html>
